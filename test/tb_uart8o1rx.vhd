@@ -114,6 +114,28 @@ begin
         RX <= '0'; -- PARITY error
         wait for 501 ns;
         RX <= '1'; -- STOP
+        wait for 501 ns;
+        RX <= '0'; -- start
+        wait for 501 ns;
+        RX <= '1'; -- 0
+        wait for 501 ns;
+        RX <= '0';
+        wait for 501 ns;
+        RX <= '1';
+        wait for 501 ns;
+        RX <= '0';
+        wait for 501 ns;
+        RX <= '1';
+        wait for 501 ns;
+        RX <= '0';
+        wait for 501 ns;
+        RX <= '1';
+        wait for 501 ns;
+        RX <= '0'; -- 7
+        wait for 501 ns;
+        RX <= '1'; -- PARITY ok
+        wait for 501 ns;
+        RX <= '1'; -- STOP
         wait for 1000 ns;
 		RUNNING <= '0';
 		wait;
